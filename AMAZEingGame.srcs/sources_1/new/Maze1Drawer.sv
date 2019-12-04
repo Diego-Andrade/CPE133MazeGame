@@ -32,21 +32,16 @@ module Maze1Drawer(
     output logic WE             // Send out we are drawing a pixel
     );
     
-    Pixel pixels [0:4][0:4];    // 5 x 5 pixel array
+    Pixel pixels [0:24];       // 450 in a list
     
-    logic [5:0] row = 0;        // to keep track of which row to draw during clock pulse
-    logic [6:0] col = 0;        // to keep track of which col to draw during clock pulse
-    logic done = 0;             // Wether maze is done drawing, avoid writting on memory over and over
+    logic [12:0] currentPixel = 0;        // to keep track of which pixel to draw during clock pulse
+    logic done = 0;                       // Wether maze is done drawing, avoid writting on memory over and over
     
     initial begin 
         // Below creates a single room
         pixels <= '{
-                     '{{6'b000000, 7'b0000010, 8'b11100000}, {6'b000000, 7'b0000011, 8'b11111111}, {6'b000000, 7'b0000100, 8'b11111111}, {6'b000000, 7'b0000101, 8'b11111111}, {6'b000000, 7'b0000110, 8'b11111111}},     
-                     '{{6'b000001, 7'b0000010, 8'b00000011}, {6'b000001, 7'b0000011, 8'b00000000}, {6'b000001, 7'b0000100, 8'b00000000}, {6'b000001, 7'b0000101, 8'b00000000}, {6'b000001, 7'b0000110, 8'b00000000}},  
-                     '{{6'b000010, 7'b0000010, 8'b00011100}, {6'b000010, 7'b0000011, 8'b00000000}, {6'b000010, 7'b0000100, 8'b00000000}, {6'b000010, 7'b0000101, 8'b00000000}, {6'b000010, 7'b0000110, 8'b00000000}},
-                     '{{6'b000011, 7'b0000010, 8'b00000000}, {6'b000011, 7'b0000011, 8'b00000000}, {6'b000011, 7'b0000100, 8'b00000000}, {6'b000011, 7'b0000101, 8'b00000000}, {6'b000011, 7'b0000110, 8'b00000000}},
-                     '{{6'b000100, 7'b0000010, 8'b11100000}, {6'b000100, 7'b0000011, 8'b00000000}, {6'b000100, 7'b0000100, 8'b00000000}, {6'b000100, 7'b0000101, 8'b00000000}, {6'b000100, 7'b0000110, 8'b00000000}} 
-                };
+            {6'b000000, 7'b0000010, 8'b11100000}, {6'b000000, 7'b0000011, 8'b11111111}, {6'b000000, 7'b0000100, 8'b11111111}, {6'b000000, 7'b0000101, 8'b11111111}, {6'b000000, 7'b0000110, 8'b11111111},{6'b000001, 7'b0000010, 8'b00000011}, {6'b000001, 7'b0000011, 8'b00000000}, {6'b000001, 7'b0000100, 8'b00000000}, {6'b000001, 7'b0000101, 8'b00000000}, {6'b000001, 7'b0000110, 8'b00000000}, {6'b000010, 7'b0000010, 8'b00011100}, {6'b000010, 7'b0000011, 8'b00000000}, {6'b000010, 7'b0000100, 8'b00000000}, {6'b000010, 7'b0000101, 8'b00000000}, {6'b000010, 7'b0000110, 8'b00000000}, {6'b000011, 7'b0000010, 8'b00000000}, {6'b000011, 7'b0000011, 8'b00000000}, {6'b000011, 7'b0000100, 8'b00000000}, {6'b000011, 7'b0000101, 8'b00000000}, {6'b000011, 7'b0000110, 8'b00000000}, {6'b000100, 7'b0000010, 8'b11100000}, {6'b000100, 7'b0000011, 8'b00000000}, {6'b000100, 7'b0000100, 8'b00000000}, {6'b000100, 7'b0000101, 8'b00000000}, {6'b000100, 7'b0000110, 8'b00000000}
+        };
     end
     
     always_ff @(posedge CLK_50MHz) begin        // Handles change row and column every clock count to change pixel out being drawn
@@ -54,25 +49,20 @@ module Maze1Drawer(
            // TODO Is there a reset needed?
         end
         else if (!done) begin
-            if (col < 5 - 1)
-                col = col + 1;
+            if (currentPixel < 25 - 1)
+                currentPixel = currentPixel + 1;
             else begin 
-                col = 0;
-                if (row < 5 - 1)
-                    row = row + 1;
-                else begin 
-                    done = 1;
-                    row = 0;
-                end 
-            end
-            
+                currentPixel = 0;
+                
+                done = 1;
+            end 
         end
     end
     
     always_comb begin                       // Set output to current pixel being drawn
         if (!done) begin                    
             WE = 1;                         // Send out new pixel is being drawn
-            pixel <= pixels[row][col];
+            pixel <= pixels[currentPixel];
         end
         else
             WE = 0;
