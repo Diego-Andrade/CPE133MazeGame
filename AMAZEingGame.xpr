@@ -59,6 +59,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+<<<<<<< Updated upstream
       <File Path="$PSRCDIR/sources_1/new/MazeTop.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -69,6 +70,10 @@
       <File Path="$PSRCDIR/sources_1/new/Maze1Drawer.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+=======
+      <File Path="$PSRCDIR/sources_1/new/Maze1Drawer.sv">
+        <FileInfo>
+>>>>>>> Stashed changes
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -98,6 +103,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+<<<<<<< Updated upstream
+=======
+      <File Path="$PSRCDIR/sources_1/new/MazeTop.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+>>>>>>> Stashed changes
       <File Path="$PSRCDIR/sources_1/new/Maze1.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -185,7 +200,10 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/Maze1_sim.sv">
         <FileInfo>
+<<<<<<< Updated upstream
           <Attr Name="AutoDisabled" Val="1"/>
+=======
+>>>>>>> Stashed changes
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
