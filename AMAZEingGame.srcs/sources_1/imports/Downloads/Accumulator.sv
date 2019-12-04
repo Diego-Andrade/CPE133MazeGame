@@ -10,16 +10,14 @@
 module Accumulator(
     input clk, LD, CLR,
     input [7:0] D,
-    output logic [7:0] Q = 0
+    output logic [13:0] Q = 0
     );
     
-    always_ff @ (posedge clk)
+    always_ff @ (posedge clk, posedge CLR)
     begin
-        if (CLR)
+        if (!CLR)
             Q <= 0;
         else if (LD)
             Q <= D + Q;
-         
-    
     end
 endmodule

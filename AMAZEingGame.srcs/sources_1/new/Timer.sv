@@ -22,13 +22,14 @@
 
 module Timer(
     input clk,
-    input start,
+    input timeStart,
     input reset,
-    output curTime
+    output [13:0] curTime
     );
     
     logic sclk;
     
     ClockDivider #(50000000) clockDivider(.clk(clk), .sclk(sclk));
+    Accumulator accum(.clk(sclk), .LD(timeStart), .CLR(reset), .D(1), .Q(curTime));
     
 endmodule
