@@ -1,0 +1,11 @@
+
+*.log
+*.log
+*.exe
+*.pb
+*.rlx
+*.wpc
+*.wdf
+*.bat
+AMAZEingGame.sim/sim_1/behav/xsim/elaborate.log
+*.log
