@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Dec  3 18:49:45 2019
-| Host         : SurfaceGoGo running 64-bit major release  (build 9200)
+| Date         : Tue Dec  3 19:55:22 2019
+| Host         : Sofia running 64-bit major release  (build 9200)
 | Command      : report_methodology -file MazeTop_methodology_drc_routed.rpt -pb MazeTop_methodology_drc_routed.pb -rpx MazeTop_methodology_drc_routed.rpx
 | Design       : MazeTop
 | Device       : xc7a35tcpg236-1
@@ -23,11 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1000
+             Violations found: 1027
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 1000       |
+| TIMING-20 | Warning  | Non-clocked latch           | 27         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -5030,6 +5031,141 @@ Related violations: <none>
 TIMING-17#1000 Warning
 Non-clocked sequential cell  
 The clock pin vga_out/framebuffer/r_memory_reg_5760_5823_3_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][0] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][0]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][0]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][0]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][0]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][0]_rep__1 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][0]_rep__1/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][3] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][3]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][3]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][3]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][3]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][3]_rep__1 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][3]_rep__1/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][3]_rep__2 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][3]_rep__2/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][7] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][7]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][7]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[Colour][7]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[Colour][7]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][0] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][0]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][0]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][0]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][0]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][0]_rep__1 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][0]_rep__1/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][1] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][1]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][1]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][1]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][1]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][1]_rep__1 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][1]_rep__1/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][2] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][2]_rep cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][2]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][2]_rep__0 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][2]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][2]_rep__1 cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][2]_rep__1/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][7] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][8] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch maze1Drawer/pixel_reg[WA][9] cannot be properly analyzed as its control pin maze1Drawer/pixel_reg[WA][9]/G is not reached by a timing clock
 Related violations: <none>
 
 

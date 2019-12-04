@@ -23,18 +23,18 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.cache/wt [current_project]
-set_property parent.project_path C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv
-  C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/ram8k_8_80x60.sv
-  C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_driver_80x60.sv
-  C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_fb__driver_80x60.sv
-  C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/MazeTop.sv
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/ram8k_8_80x60.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_driver_80x60.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_fb__driver_80x60.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/MazeTop.sv}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -44,8 +44,8 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/constrs_1/new/basys_3.xdc
-set_property used_in_implementation false [get_files C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.srcs/constrs_1/new/basys_3.xdc]
+read_xdc {{C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/constrs_1/new/basys_3.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/constrs_1/new/basys_3.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Dec  3 18:49:47 2019
-| Host         : SurfaceGoGo running 64-bit major release  (build 9200)
+| Date         : Tue Dec  3 19:55:23 2019
+| Host         : Sofia running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file MazeTop_timing_summary_routed.rpt -pb MazeTop_timing_summary_routed.pb -rpx MazeTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : MazeTop
 | Device       : 7a35t-cpg236
@@ -54,6 +54,8 @@ Table of Contents
 --------------------
  There are 1448 register/latch pins with no clock driven by root clock pin: CLK_50MHz_reg/Q (HIGH)
 
+ There are 27 register/latch pins with no clock driven by root clock pin: maze1Drawer/done_reg/Q (HIGH)
+
  There are 38 register/latch pins with no clock driven by root clock pin: vga_out/CLK_25MHz_reg/Q (HIGH)
 
 
@@ -69,14 +71,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 1304 pins that are not constrained for maximum delay. (HIGH)
+ There are 5735 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There is 1 input port with no input delay specified. (HIGH)
+ There are 0 input ports with no input delay specified.
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

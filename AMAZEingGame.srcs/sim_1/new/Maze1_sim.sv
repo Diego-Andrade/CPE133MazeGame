@@ -23,7 +23,6 @@
 module Maze1_sim();
     logic clk = 0;
     logic reset = 1;
-    logic [20:0] test = {6'h10, 7'b10, 8'b11111111};
     Pixel pixel;
     
     Maze1Drawer maze1Drawer(.CLK_50MHz(clk), .reset(reset), .pixel(pixel));

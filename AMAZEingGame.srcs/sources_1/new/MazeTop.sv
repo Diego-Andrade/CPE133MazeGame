@@ -21,22 +21,18 @@
 
 module MazeTop(
     input CLK,
-    input [12:0] WA,
-    input r,
-    input g,
-    input b,
-//    input [7:0] WD,
-    input WE,
     output [7:0] VGA_RGB,
     output VGA_HS,
     output VGA_VS
     );
     
+    // Variables for mazeDrawer
     Pixel p;
+    logic WE;
     
-    logic [2:0] red;
-    logic [2:0] green;
-    logic [1:0] blue;
+    logic [2:0] red;        // Helpers to store output returned from VGA_driver
+    logic [2:0] green;      // ..
+    logic [1:0] blue;       // ..
     
     // Divide clock by 2
     logic CLK_50MHz = 0;
@@ -44,14 +40,13 @@ module MazeTop(
         CLK_50MHz <= ~CLK_50MHz;
     end
     
-    Maze1Drawer maze1Drawer(.CLK_50MHz(CLK_50MHz), .reset(1), .pixel(p));
+    Maze1Drawer maze1Drawer(.CLK_50MHz(CLK_50MHz), .reset(1), .pixel(p), .WE(WE));
     
     // Display out
     vga_fb_driver_80x60 vga_out( 
         .CLK_50MHz (CLK_50MHz),
-        .WA(p.WA),
-//        .WD({r, 2'b00, g, 2'b00, b, 1'b0}),
-        .WD(p.Colour),
+        .WA(p.WA),                  // get Address from pixel
+        .WD(p.Colour),              // get Colour from pixel
         .WE(WE),
         .ROUT(red),
         .GOUT(green),

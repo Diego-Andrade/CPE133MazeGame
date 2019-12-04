@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Dec  3 18:48:40 2019
-| Host         : SurfaceGoGo running 64-bit major release  (build 9200)
+| Date         : Tue Dec  3 19:54:50 2019
+| Host         : Sofia running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MazeTop_control_sets_placed.rpt
 | Design       : MazeTop
 | Device       : xc7a35t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     8 |
-| Unused register locations in slices containing registers |    26 |
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            3 |
-|    16+ |            5 |
+|    16+ |           13 |
 +--------+--------------+
 
 
@@ -45,29 +45,37 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              18 |            4 |
+| No           | No                    | No                     |              72 |           21 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              56 |           17 |
+| No           | Yes                   | No                     |              56 |           18 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              20 |            4 |
+| Yes          | Yes                   | No                     |              20 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+---------------------------------------+---------------------------------------+------------------+----------------+
-|   Clock Signal  |             Enable Signal             |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
-+-----------------+---------------------------------------+---------------------------------------+------------------+----------------+
-|  CLK_IBUF_BUFG  |                                       |                                       |                1 |              2 |
-|  CLK_25MHz_BUFG |                                       | vga_out/vga_out/VSYNC0                |                1 |              2 |
-|  CLK_25MHz_BUFG |                                       | vga_out/vga_out/HSYNC0                |                1 |              2 |
-|  CLK_25MHz_BUFG |                                       | vga_out/vga_out/BOUT[1]_i_1_n_0       |                6 |             16 |
-|  CLK_25MHz_BUFG | vga_out/vga_out/horizontal[9]_i_1_n_0 | vga_out/vga_out/vertical              |                4 |             20 |
-|  CLK_50MHz_BUFG | WE_IBUF                               |                                       |                3 |             24 |
-|  CLK_25MHz_BUFG |                                       | vga_out/vga_out/horizontal[9]_i_1_n_0 |                9 |             36 |
-|  CLK_50MHz_BUFG |                                       |                                       |              360 |           2872 |
-+-----------------+---------------------------------------+---------------------------------------+------------------+----------------+
++-------------------+---------------------------------------+---------------------------------------+------------------+----------------+
+|    Clock Signal   |             Enable Signal             |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-------------------+---------------------------------------+---------------------------------------+------------------+----------------+
+|  CLK_25MHz_BUFG   |                                       | vga_out/vga_out/VSYNC0                |                1 |              2 |
+|  CLK_25MHz_BUFG   |                                       | vga_out/vga_out/HSYNC0                |                1 |              2 |
+|  CLK_IBUF_BUFG    |                                       |                                       |                1 |              2 |
+|  CLK_25MHz_BUFG   |                                       | vga_out/vga_out/BOUT[1]_i_1_n_0       |                7 |             16 |
+|  CLK_25MHz_BUFG   | vga_out/vga_out/horizontal[9]_i_1_n_0 | vga_out/vga_out/vertical              |                3 |             20 |
+|  CLK_50MHz_BUFG   | maze1Drawer/BOUT_reg[0]_1             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/BOUT_reg[0]_3             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/ROUT_reg[2]_1             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/ROUT_reg[2]_0             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/ROUT_reg[2]               |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/BOUT_reg[0]_0             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/BOUT_reg[0]_2             |                                       |                4 |             24 |
+|  CLK_50MHz_BUFG   | maze1Drawer/BOUT_reg[0]               |                                       |                4 |             24 |
+|  CLK_25MHz_BUFG   |                                       | vga_out/vga_out/horizontal[9]_i_1_n_0 |                9 |             36 |
+| ~maze1Drawer/done |                                       |                                       |               16 |             54 |
+|  CLK_50MHz_BUFG   |                                       |                                       |              340 |           2704 |
++-------------------+---------------------------------------+---------------------------------------+------------------+----------------+
 
 

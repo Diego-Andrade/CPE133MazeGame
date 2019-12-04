@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../AMAZEingGame.srcs/sources_1/new/Maze1.sv" \
+"../../../../AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv" \
 "../../../../AMAZEingGame.srcs/sim_1/new/Maze1_sim.sv" \
 
 # compile glbl module

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/Diego/Documents/CPE133/CPE133MazeGame/AMAZEingGame.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4ff81ed07d584f97ababd32a6e6abe33"/>
@@ -31,7 +31,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="20"/>
+    <Option Name="WTXSimLaunchSim" Val="25"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -59,21 +59,8 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-<<<<<<< Updated upstream
-      <File Path="$PSRCDIR/sources_1/new/MazeTop.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/Maze1Drawer.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-=======
-      <File Path="$PSRCDIR/sources_1/new/Maze1Drawer.sv">
-        <FileInfo>
->>>>>>> Stashed changes
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -81,7 +68,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/ram8k_8_80x60.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -89,7 +75,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/vga_driver_80x60.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -97,14 +82,11 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/vga_fb__driver_80x60.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-<<<<<<< Updated upstream
-=======
       <File Path="$PSRCDIR/sources_1/new/MazeTop.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -112,7 +94,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
->>>>>>> Stashed changes
       <File Path="$PSRCDIR/sources_1/new/Maze1.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -200,10 +181,6 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/Maze1_sim.sv">
         <FileInfo>
-<<<<<<< Updated upstream
-          <Attr Name="AutoDisabled" Val="1"/>
-=======
->>>>>>> Stashed changes
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
