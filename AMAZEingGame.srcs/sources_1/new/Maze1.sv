@@ -40,7 +40,7 @@ module Maze1(
     );
     
     // Temp for done drawing maze
-    logic tDone = 1;        
+    logic tDone;        
     
     // Temporary draw variables
     logic tWE1, tWE2;
@@ -50,11 +50,14 @@ module Maze1(
     logic [5:0] tRow;
     logic [6:0] tCol;
     
-    //Maze1Drawer maze1Drawer(.CLK_50MHz(CLK_50MHz), .reset(1), .pixel(tP1), .WE(tWE1), .done(tDone));    
+    logic mazeClock;
+    ClockDivider #(50000) clockDivider(.clk(clk), .sclk(mazeClock));
     
-    Maze1FSM maze1fsm(.clk(clk), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .st(start), .row(tRow), .col(tCol), .done(complete));
+    Maze1Drawer maze1Drawer(.CLK_50MHz(CLK_50MHz), .reset(reset), .pixel(tP1), .WE(tWE1), .done(tDone));    
     
-    PlayerDrawer p1(.CLK_50MHz(clk), .row(tRow), .col(tCol), .p(tP2), .WE(tWE2));
+    Maze1FSM maze1fsm(.clk(mazeClock), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .st(start), .row(tRow), .col(tCol), .done(complete));
+    
+    PlayerDrawer p1(.CLK_50MHz(CLK_50MHz), .row(tRow), .col(tCol), .p(tP2), .WE(tWE2));
     
     // Select which drawer has control of VGA output
     Mux2 #(1) weOutput(.zero(tWE1), .one(tWE2), .sel(tDone), .mux_out(WE));

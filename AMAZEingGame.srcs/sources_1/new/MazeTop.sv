@@ -50,10 +50,13 @@ module MazeTop(
     logic [2:0] green;      // ..
     logic [1:0] blue;       // ..
     
-    // 50 MHz clock generator
-    ClockDivider #(50000000) clockDivider(.clk(clk), .sclk(CLK_50MHz));
+    // Divide clock by 2
+    logic CLK_50MHz = 0;
+    always_ff @(posedge clk) begin
+        CLK_50MHz <= ~CLK_50MHz;
+    end
 
-    Maze1(.clk(clk), .CLK_50MHz(CLK_50MHz), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .start(tTimeStart), .pixel(tP1), .WE(tWE1), .complete(tComplete) );
+    Maze1(.clk(clk), .CLK_50MHz(CLK_50MHz), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .start(tTimeStart), .pixel(tP1), .WE(tWE1), .complete(tComplete));
     
     Timer t1(.clk(clk), .timeStart(tTimeStart), .reset(reset), .curTime(curTime));
 

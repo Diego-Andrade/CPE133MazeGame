@@ -157,10 +157,12 @@ module Maze1FSM(
                     NS = r13;
                 else if (d & !u & !l & !r)
                     NS = r33;
-                else if (l & !u & !l & !r)
+                else if (l & !u & !d & !r)
                     NS = r22;
-                else
+                else if (r & !u & !d & !l)
                     NS = r24;
+                else 
+                    NS = r23;
             end
 
             r24:

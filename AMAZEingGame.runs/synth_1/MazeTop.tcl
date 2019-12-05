@@ -30,8 +30,16 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/imports/Downloads/Accumulator.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/ClockDivider.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1.sv}
   {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1FSM.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/imports/new/Mux2.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/PlayerDrawer.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Timer.sv}
   {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/ram8k_8_80x60.sv}
+  {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/univ_sseg.sv}
   {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_driver_80x60.sv}
   {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/vga_fb__driver_80x60.sv}
   {C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/MazeTop.sv}
