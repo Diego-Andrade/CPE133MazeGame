@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/willi/OneDrive/Documents/GitHub/CPE133MazeGame/AMAZEingGame.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4ff81ed07d584f97ababd32a6e6abe33"/>
@@ -155,14 +155,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Maze2FSM.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/univ_sseg.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
