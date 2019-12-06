@@ -1,0 +1,7 @@
+Running: xsim.dir/Maze1_sim_behav/xsimk.exe -simmode gui -wdb Maze1_sim_behav.wdb -simrunnum 0 -socket 58383
+Design successfully loaded
+Design Loading Memory Usage: 4856 KB (Peak: 4856 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5312 KB (Peak: 5312 KB)
+Simulation CPU Usage: 0 ms

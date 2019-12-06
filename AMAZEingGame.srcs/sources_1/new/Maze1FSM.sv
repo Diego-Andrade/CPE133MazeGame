@@ -28,12 +28,9 @@ module Maze1FSM(
     input d,        // Down
     input l,        // Left
     input r,        // Right
-    input q,
-    input w,
-    input e, 
-    input rK,
-    output logic [4:0] row,
-    output logic [4:0] col,
+    output logic st,
+    output logic [5:0] row,
+    output logic [6:0] col,
     output logic done
     );
     
@@ -44,24 +41,32 @@ module Maze1FSM(
         r41 = 5'b10000, r42 = 5'b10001, r43 = 5'b10010, r44 = 5'b10011, r45 = 5'b10100,
         r51 = 5'b10101, r52 = 5'b10110, r53 = 5'b10111, r54 = 5'b11000, r55 = 5'b11001;
     
-    logic [4:0] NS;
+    logic [4:0] NS = START;
     logic [4:0] PS = START;
+    
+    logic tE, tU, tD, tL, tR;
 
     always_ff @ (posedge clk, negedge reset)
     begin
-        if (!reset)
+        if (!reset) begin
             PS = START;
-        else
-            PS = NS;
+        end
+        else begin
+            if ((tE == enter) & (tU == u) & (tD == d) & (tL == l) & (tR == r) ) begin   // No state changed
+                PS = PS;
+            end else begin 
+                PS = NS;
+                tE = enter; tU = u; tD = d; tL = l; tR = r;
+            end
+        end
     end
 
     always_comb 
     begin
-        // Initialize outputs
-        row = 1; col = 1; done = 0;
         case (PS)
             START:
             begin
+                row = 0; col = 0; done = 0; st = 0;
                 if (enter)
                     NS = r11;
                 else
@@ -70,8 +75,8 @@ module Maze1FSM(
 
             r11:
             begin
-                row = 1; col = 1;
-                if (l & !u & !d & !r)
+                row = 1; col = 1; done = 0; st = 1;
+                if (r & !u & !d & !l)
                     NS = r12;
                 else if (d & !u & !l & !r)
                     NS = r21;
@@ -81,7 +86,7 @@ module Maze1FSM(
 
             r12:
             begin
-                row = 1; col = 2;
+                row = 1; col = 2; done = 0; st = 1;
                 if (l & !u & !d & !r)
                     NS = r11;
                 else if (r & !u & !d & !l)
@@ -92,7 +97,7 @@ module Maze1FSM(
 
             r13:
             begin
-                row = 1; col = 3;
+                row = 1; col = 3; done = 0; st = 1;
                 if (l & !u & !d & !r)
                     NS = r12;
                 else if (d & !u & !l & !r)
@@ -103,7 +108,7 @@ module Maze1FSM(
 
             r14:
             begin
-                row = 1; col = 4;
+                row = 1; col = 4; done = 0; st = 1;
                 if (d & !u & !l & !r)
                     NS = r24;
                 else if (r & !u & !d & !l)
@@ -114,7 +119,7 @@ module Maze1FSM(
 
             r15:
             begin
-                row = 1; col = 5;
+                row = 1; col = 5; done = 0; st = 1;
                 if (l & !u & !d & !r) 
                     NS = r14;
                 else if (d & !u & !l & !r) 
@@ -125,7 +130,7 @@ module Maze1FSM(
 
             r21:
             begin 
-                row = 2; col = 1;
+                row = 2; col = 1; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r11;
                 else if (d & !u & !l & !r)
@@ -136,7 +141,7 @@ module Maze1FSM(
 
             r22:
             begin
-                row = 2; col = 2;
+                row = 2; col = 2; done = 0; st = 1;
                 if (d & !u & !l & !r)
                     NS = r32;
                 else if (r & !u & !d & !l)
@@ -147,20 +152,22 @@ module Maze1FSM(
 
             r23:
             begin
-                row = 2; col = 3;
+                row = 2; col = 3; done = 0; st = 1;
                 if (u & !d & !l &!r)
                     NS = r13;
                 else if (d & !u & !l & !r)
                     NS = r33;
-                else if (l & !u & !l & !r)
+                else if (l & !u & !d & !r)
                     NS = r22;
-                else
+                else if (r & !u & !d & !l)
                     NS = r24;
+                else 
+                    NS = r23;
             end
 
             r24:
             begin
-                row = 2; col = 4;
+                row = 2; col = 4; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r14;
                 else if (l & !u & !d & !r)
@@ -171,7 +178,7 @@ module Maze1FSM(
 
             r25:
             begin
-                row = 2; col = 5;
+                row = 2; col = 5; done = 0; st = 1;
                 if (u & !d & !l  & !r)
                     NS = r15;
                 else if (d & !u & !l & !r)
@@ -182,7 +189,7 @@ module Maze1FSM(
 
             r31:
             begin
-                row = 3; col = 1;
+                row = 3; col = 1; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r21;
                 else if (d & !u & !l & !r)
@@ -195,7 +202,7 @@ module Maze1FSM(
 
             r32: 
             begin 
-                row = 3; col = 2;
+                row = 3; col = 2; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r22;
                 else if (d & !u & !l & !r)
@@ -208,7 +215,7 @@ module Maze1FSM(
 
             r33:
             begin 
-                row = 3; col = 3;
+                row = 3; col = 3; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r23;
                 else if (d & !u & !l & !r)
@@ -219,7 +226,7 @@ module Maze1FSM(
 
             r34:
             begin 
-                row = 3; col = 4;
+                row = 3; col = 4; done = 0; st = 1;
                 if (d & !u & !l & !r)
                     NS = r44;
                 else if (r & !u & !d & !l)
@@ -230,7 +237,7 @@ module Maze1FSM(
 
             r35:
             begin
-                row = 3; col = 5;
+                row = 3; col = 5; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r25;
                 else if (d & !u & !l & !r)
@@ -243,7 +250,7 @@ module Maze1FSM(
 
             r41:
             begin 
-                row = 4; col = 1;
+                row = 4; col = 1; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r31;
                 else 
@@ -252,7 +259,7 @@ module Maze1FSM(
 
             r42:
             begin 
-                row = 4; col = 2;
+                row = 4; col = 2; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r32;
                 else if (d & !u & !l & !r)
@@ -263,7 +270,7 @@ module Maze1FSM(
 
             r43: 
             begin
-                row = 4; col = 3;
+                row = 4; col = 3; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r33;
                 else if (d & !u & !l & !r)
@@ -276,7 +283,7 @@ module Maze1FSM(
 
             r44:
             begin
-                row = 4; col = 4;
+                row = 4; col = 4; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r34;
                 else if (d & !u & !l & !r)
@@ -289,7 +296,7 @@ module Maze1FSM(
 
             r45:
             begin
-                row = 4; col = 5;
+                row = 4; col = 5; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r35;
                 else if (d & !u & !l & !r)
@@ -300,7 +307,7 @@ module Maze1FSM(
 
             r51:
             begin 
-                row = 5; col = 1;
+                row = 5; col = 1; done = 0; st = 1;
                 if (r & !u & !d & !l)
                     NS = r52;
                 else 
@@ -309,7 +316,7 @@ module Maze1FSM(
 
             r52:
             begin 
-                row = 5; col = 2;
+                row = 5; col = 2; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r42;
                 else if (l & !u & !d & !r)
@@ -322,7 +329,7 @@ module Maze1FSM(
 
             r53:
             begin
-                row = 5; col = 3;
+                row = 5; col = 3; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r43;
                 else if (l & !u & !d & !r)
@@ -333,14 +340,13 @@ module Maze1FSM(
 
             r54:
             begin
-                row = 5; col = 4;
-                done = 1;       
+                row = 5; col = 4; done = 1; st = 0;       
                 NS = r54;   // Trapping in target room since maze complete
             end
 
             r55:
             begin
-                row = 5; col = 5;
+                row = 5; col = 5; done = 0; st = 1;
                 if (u & !d & !l & !r)
                     NS = r45;
                 else 

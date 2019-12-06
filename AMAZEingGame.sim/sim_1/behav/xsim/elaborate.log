@@ -1,0 +1,19 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 4ff81ed07d584f97ababd32a6e6abe33 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Maze1_sim_behav xil_defaultlib.Maze1_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Maze1Drawer
+Compiling module xil_defaultlib.Maze1FSM
+Compiling module xil_defaultlib.PlayerDrawer
+Compiling module xil_defaultlib.Mux2(WIDTH=1)
+Compiling module xil_defaultlib.Mux2(WIDTH=21)
+Compiling module xil_defaultlib.Maze1
+Compiling module xil_defaultlib.Maze1_sim
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_Maze1_sv
+Built simulation snapshot Maze1_sim_behav

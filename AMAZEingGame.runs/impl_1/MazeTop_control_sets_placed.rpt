@@ -1,0 +1,206 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Dec  4 15:04:02 2019
+| Host         : Sofia running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MazeTop_control_sets_placed.rpt
+| Design       : MazeTop
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   139 |
+| Unused register locations in slices containing registers |    86 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      4 |            1 |
+|     10 |            3 |
+|    16+ |          132 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           33 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             192 |           34 |
+| Yes          | No                    | No                     |              36 |           10 |
+| Yes          | No                    | Yes                    |              26 |            4 |
+| Yes          | Yes                   | No                     |              56 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+--------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|               Clock Signal              |                Enable Signal               |                    Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++-----------------------------------------+--------------------------------------------+--------------------------------------------------------+------------------+----------------+
+| ~nolabel_line59/p1/dataSent[1]          |                                            | nolabel_line59/p1/p_reg[Colour][7]_i_1_n_0             |                1 |              2 |
+|  CLK_25MHz_BUFG                         |                                            | vga_out/vga_out/VSYNC0                                 |                1 |              2 |
+|  CLK_25MHz_BUFG                         |                                            | vga_out/vga_out/HSYNC0                                 |                1 |              2 |
+|  sseg/CLK_DIV/CLK                       |                                            |                                                        |                1 |              4 |
+|  nolabel_line59/clockDivider/mazeClock  | nolabel_line59/maze1fsm/PS                 | t1/accum/Q_reg[0]_0                                    |                2 |             10 |
+|  nolabel_line59/clockDivider/mazeClock  | nolabel_line59/maze1fsm/tE_0               |                                                        |                2 |             10 |
+|  CLK_50MHz_BUFG                         |                                            |                                                        |                4 |             10 |
+|  CLK_25MHz_BUFG                         |                                            | vga_out/vga_out/BOUT[1]_i_1_n_0                        |                5 |             16 |
+|  t1/clockDivider/Q_reg[7]               | nolabel_line59/maze1fsm/tTimeStart         | t1/accum/Q_reg[0]_0                                    |                2 |             16 |
+|  CLK_25MHz_BUFG                         | vga_out/vga_out/horizontal[9]_i_1_n_0      | vga_out/vga_out/vertical                               |                2 |             20 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_11  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_101 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_115 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]     |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_0   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_107 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_112 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_108 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_100 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_113 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_12  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_109 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_118 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_102 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_10  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_111 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_117 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_110 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_114 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_105 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_116 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_1   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_103 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_3   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_34  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_40  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_16  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_18  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_15  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_29  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_24  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_42  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_44  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_51  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_23  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_53  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_39  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_54  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_55  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_47  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_57  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_41  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_59  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_21  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_49  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_62  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_22  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_43  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_5   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_28  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_13  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_20  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_60  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_63  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_46  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_64  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_36  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_37  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_50  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_2   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_27  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_35  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_14  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_4   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_45  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_52  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_56  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_26  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_32  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_19  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_33  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_17  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_38  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_25  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_31  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_48  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_58  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_6   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_61  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_65  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_30  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_90  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_88  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_76  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_99  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_81  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_91  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_95  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_8   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_72  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_89  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_93  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_78  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_96  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_92  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_75  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_85  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_98  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_83  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_74  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_79  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_84  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_67  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_77  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_80  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_71  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_70  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_68  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_7   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_94  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_9   |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_66  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_73  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_69  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_82  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_86  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_87  |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_97  |                                                        |                4 |             24 |
+|  nolabel_line59/maze1fsm/st_reg_i_2_n_0 |                                            |                                                        |                8 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_104 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/ROUT_reg[2]_106 |                                                        |                4 |             24 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/p1/tAdjOldCol[6]_i_1_n_0    |                                                        |                8 |             26 |
+| ~nolabel_line59/p1/dataSent[1]          |                                            |                                                        |                5 |             26 |
+| ~tDone                                  |                                            |                                                        |                8 |             26 |
+|  clk_IBUF_BUFG                          |                                            |                                                        |                7 |             34 |
+|  CLK_50MHz_BUFG                         | nolabel_line59/maze1Drawer/currentPixel_0  | nolabel_line59/maze1Drawer/currentPixel_rep[8]_i_1_n_0 |                6 |             36 |
+|  CLK_25MHz_BUFG                         |                                            | vga_out/vga_out/horizontal[9]_i_1_n_0                  |               10 |             50 |
+|  clk_IBUF_BUFG                          |                                            | t1/clockDivider/count[0]_i_1__0_n_0                    |                8 |             60 |
+|  clk_IBUF_BUFG                          |                                            | nolabel_line59/clockDivider/clear                      |                8 |             60 |
++-----------------------------------------+--------------------------------------------+--------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,11 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.sim/sim_1/behav/xsim/glbl.v,1575428398,verilog,,,,glbl,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sim_1/new/Maze1_sim.sv,1575490976,systemVerilog,,,,Maze1_sim,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/imports/new/Mux2.sv,1575428398,systemVerilog,,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/PlayerDrawer.sv,,Mux2,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1.sv,1575495712,systemVerilog,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sim_1/new/Maze1_sim.sv;C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/imports/new/Mux2.sv;C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv;C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1FSM.sv;C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/PlayerDrawer.sv,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv,,$unit_Maze1_sv;Maze1,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1Drawer.sv,1575495672,systemVerilog,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sim_1/new/Maze1_sim.sv,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1FSM.sv,,Maze1Drawer,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/Maze1FSM.sv,1575490976,systemVerilog,,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/imports/new/Mux2.sv,,Maze1FSM,,,,,,,,
+C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sources_1/new/PlayerDrawer.sv,1575494657,systemVerilog,,C:/Users/Diego Andrade/Desktop/CPE133MazeGame/AMAZEingGame.srcs/sim_1/new/Maze1_sim.sv,,PlayerDrawer,,,,,,,,

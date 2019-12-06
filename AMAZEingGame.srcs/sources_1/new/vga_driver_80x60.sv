@@ -56,14 +56,14 @@ module vga_driver_80x60(
     );
 
     const integer HW = 640;                // horizontal columns: 25.17 us
-    const integer HF = 22;                 // front porch: 0.94 us
-    const integer HS = 93;                 // horizontal sync pulse: 3.77 us
-    const integer HB = 45;                 // back porch: 1.89 us
+    const integer HF = 16;                 // front porch: 0.94 us
+    const integer HS = 96;                 // horizontal sync pulse: 3.77 us
+    const integer HB = 46;                 // back porch: 1.89 us
     const integer HC = HW + HF + HS + HB;  // one horizontal sync cycle: 31.77 us
     const integer VW = 480;                // vertical rows: 15.25 ms
-    const integer VF = 11;                 // front porch: 0.35 ms
+    const integer VF = 10;                 // front porch: 0.35 ms
     const integer VS = 2;                  // vertical sync pulse: 64 us
-    const integer VB = 32;                 // back porch: 1.02 ms
+    const integer VB = 33;                 // back porch: 1.02 ms
     const integer VC = VW + VF + VS + VB;  // one vertical sync cycle: 16.6 ms
 
     logic [9:0] horizontal = '0;  // holds up to HC - 1
