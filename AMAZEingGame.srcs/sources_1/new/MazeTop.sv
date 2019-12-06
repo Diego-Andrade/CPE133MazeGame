@@ -34,9 +34,6 @@ module MazeTop(
     output VGA_VS
     );
     
-    // Clocks
-    logic CLK_50MHz;
-    
     // Variables for Timer
     logic tTimeStart;
     logic [13:0] curTime;
