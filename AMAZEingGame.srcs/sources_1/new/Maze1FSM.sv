@@ -44,7 +44,7 @@ module Maze1FSM(
     logic [4:0] NS = START;
     logic [4:0] PS = START;
     
-    logic tE, tU, tD, tL, tR;
+    logic tE = 0, tU = 0, tD = 0, tL = 0, tR = 0;
 
     always_ff @ (posedge clk, negedge reset)
     begin

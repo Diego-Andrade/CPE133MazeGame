@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Maze1FSM_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Maze1FSM_sim" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="231200001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/Maze1FSM_sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/NS" type="array">
+      <obj_property name="ElementShortName">NS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/PS" type="array">
+      <obj_property name="ElementShortName">PS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/enter" type="logic">
+      <obj_property name="ElementShortName">enter</obj_property>
+      <obj_property name="ObjectShortName">enter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/u" type="logic">
+      <obj_property name="ElementShortName">u</obj_property>
+      <obj_property name="ObjectShortName">u</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/d" type="logic">
+      <obj_property name="ElementShortName">d</obj_property>
+      <obj_property name="ObjectShortName">d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/l" type="logic">
+      <obj_property name="ElementShortName">l</obj_property>
+      <obj_property name="ObjectShortName">l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/r" type="logic">
+      <obj_property name="ElementShortName">r</obj_property>
+      <obj_property name="ObjectShortName">r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/row" type="array">
+      <obj_property name="ElementShortName">row[5:0]</obj_property>
+      <obj_property name="ObjectShortName">row[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/col" type="array">
+      <obj_property name="ElementShortName">col[6:0]</obj_property>
+      <obj_property name="ObjectShortName">col[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/tE" type="logic">
+      <obj_property name="ElementShortName">tE</obj_property>
+      <obj_property name="ObjectShortName">tE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/tU" type="logic">
+      <obj_property name="ElementShortName">tU</obj_property>
+      <obj_property name="ObjectShortName">tU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/tD" type="logic">
+      <obj_property name="ElementShortName">tD</obj_property>
+      <obj_property name="ObjectShortName">tD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/tL" type="logic">
+      <obj_property name="ElementShortName">tL</obj_property>
+      <obj_property name="ObjectShortName">tL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Maze1FSM_sim/maze1fsm/tR" type="logic">
+      <obj_property name="ElementShortName">tR</obj_property>
+      <obj_property name="ObjectShortName">tR</obj_property>
+   </wvobject>
+</wave_config>
