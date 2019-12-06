@@ -53,7 +53,7 @@ module MazeTop(
         CLK_50MHz <= ~CLK_50MHz;
     end
 
-    Maze1(.clk(clk), .CLK_50MHz(CLK_50MHz), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .start(tTimeStart), .pixel(tP1), .WE(tWE1), .complete(tComplete));
+    Maze1 maze1(.clk(clk), .CLK_50MHz(CLK_50MHz), .enter(enter), .reset(reset), .u(u), .d(d), .l(l), .r(r), .start(tTimeStart), .pixel(tP1), .WE(tWE1), .complete(tComplete));
     
     Timer t1(.clk(clk), .timeStart(tTimeStart), .reset(reset), .curTime(curTime));
 
